@@ -3,7 +3,7 @@
 Plugin Name: Custom Post Type Clients
 Plugin URL: https://github.com/Horttcore/Custom-Post-Type-Clients
 Description:
-Version: 0.1
+Version: 0.2
 Author: Ralf Hortt
 Author URL: http://horttcore.de/
 */
@@ -22,8 +22,8 @@ endif;
 
 
 /**
-*  Plugin
-*/
+ *  Plugin
+ */
 class Custom_Post_Type_Client
 {
 
@@ -32,8 +32,11 @@ class Custom_Post_Type_Client
 	/**
 	 * Constructor
 	 *
+	 * @access public
+	 * @author Ralf Hortt
+	 * @since 0.1
 	 **/
-	function __construct()
+	public function __construct()
 	{
 		add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes' ) );
 		add_action( 'init', array( $this, 'register_post_type' ) );
@@ -46,11 +49,11 @@ class Custom_Post_Type_Client
 
 
 	/**
-	 * undocumented function
+	 * Add meta boxes
 	 *
 	 * @access public
-	 * @return void
 	 * @author Ralf Hortt
+	 * @since 0.1
 	 **/
 	public function add_meta_boxes()
 	{
@@ -64,8 +67,8 @@ class Custom_Post_Type_Client
 	 *
 	 * @access public
 	 * @param obj $post Post object
-	 * @return void
 	 * @author Ralf Hortt
+	 * @since 0.1
 	 **/
 	public function meta_box( $post )
 	{
@@ -73,23 +76,27 @@ class Custom_Post_Type_Client
 		wp_nonce_field( 'save-client-meta', 'client-meta-nounce' );
 		?>
 		<table class="form-table">
+			<?php do_action( 'cpt-clients-information-meta-box-before', $post ) ?>
 			<tr>
 				<th><label for="client-url"><?php _e( 'URL', 'cpt-clients' ); ?></label></th>
-				<td><input type="text" name="client-url" id="client-url" value="<?php echo $meta['url'] ?>"></td>
+				<td><input type="text" name="client-url" id="client-url" value="<?php echo esc_url( $meta['url'] ) ?>"></td>
 			</tr>
+			<?php do_action( 'cpt-clients-information-meta-box-after', $post ) ?>
 		</table>
 		<?php
 	}
+
 
 
 	/**
 	 * Post updated messages
 	 *
 	 * @param array $messages Update Messages
-	 * @return void
+	 * @return array $messages Update Messages
 	 * @author Ralf Hortt
+	 * @since 0.1
 	 **/
-	public function post_updated_messages( $messages )
+	public function post_updated_messages( array $messages )
 	{
 		global $post, $post_ID;
 
@@ -117,8 +124,8 @@ class Custom_Post_Type_Client
 	 * Register post type
 	 *
 	 * @access public
-	 * @return void
 	 * @author Ralf Hortt
+	 * @since 0.1
 	 **/
 	public function register_post_type()
 	{
@@ -150,6 +157,7 @@ class Custom_Post_Type_Client
 			'has_archive' => FALSE,
 			'hierarchical' => FALSE,
 			'menu_position' => NULL,
+			'menu_icon' => plugins_url( 'images/menu-icon.png', __FILE__ ),
 			'supports' => array( 'title', 'thumbnail', 'page-attributes' )
 		);
 
@@ -163,8 +171,8 @@ class Custom_Post_Type_Client
 	 *
 	 * @access public
 	 * @param int $post_id Post ID
-	 * @return void
 	 * @author Ralf Hortt
+	 * @since 0.1
 	 **/
 	public function save_post( $post_id )
 	{
@@ -175,9 +183,12 @@ class Custom_Post_Type_Client
 			return;
 
 		update_post_meta( $post_id, '_meta', array(
-			'url' => $_POST['client-url']
+			'url' => sanitize_textfield( $_POST['client-url'] )
 		) );
 	}
 
+
+
 }
+
 new Custom_Post_Type_Client;
