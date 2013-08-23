@@ -1,0 +1,156 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Post Type Clients v0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-01-23 11:28:05+0000\n"
+"Last-Translator: horttcore <me@horttcore.de>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: cpt-clients.php:57
+#@ cpt-clients
+msgid "Information"
+msgstr "Informationen"
+
+#: cpt-clients.php:77
+#@ cpt-clients
+msgid "URL"
+msgstr "URL"
+
+#: cpt-clients.php:98
+#, php-format
+#@ cpt-clients
+msgid "Client updated. <a href=\"%s\">View client</a>"
+msgstr "Kunde aktualisiert."
+
+#: cpt-clients.php:99
+#@ cpt-clients
+msgid "Custom field updated."
+msgstr "Benutzerdefiniertesfeld aktualisiert."
+
+#: cpt-clients.php:100
+#@ cpt-clients
+msgid "Custom field deleted."
+msgstr "Benutzerdefiniertesfeld gelöscht."
+
+#: cpt-clients.php:101
+#@ cpt-clients
+msgid "Client updated."
+msgstr "Kunde aktualisiert."
+
+#. translators: %s: date and time of the revision
+#: cpt-clients.php:103
+#, php-format
+#@ cpt-clients
+msgid "Client restored to revision from %s"
+msgstr "Kunde von Revision %s wiederhergestellt"
+
+#: cpt-clients.php:104
+#, php-format
+#@ cpt-clients
+msgid "Client published. <a href=\"%s\">View client</a>"
+msgstr "Kunde veröffentlicht."
+
+#: cpt-clients.php:105
+#@ cpt-clients
+msgid "Client saved."
+msgstr "Kunde gespeichert."
+
+#: cpt-clients.php:106
+#, php-format
+#@ cpt-clients
+msgid "Client submitted. <a target=\"_blank\" href=\"%s\">Preview client</a>"
+msgstr "Kunde zur Überprüfung vorgelegt."
+
+#: cpt-clients.php:107
+#, php-format
+#@ cpt-clients
+msgid "Client scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s\">Preview client</a>"
+msgstr "Kunde für <strong>%1$s</strong> geplant."
+
+#: cpt-clients.php:107
+#@ default
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: cpt-clients.php:108
+#, php-format
+#@ cpt-clients
+msgid "Client draft updated. <a target=\"_blank\" href=\"%s\">Preview client</a>"
+msgstr "Kunden Entwurf aktualisiert."
+
+#: cpt-clients.php:126
+#@ cpt-clients
+msgctxt "post type general name"
+msgid "Clients"
+msgstr "Kunden"
+
+#: cpt-clients.php:127
+#@ cpt-clients
+msgctxt "post type singular name"
+msgid "Client"
+msgstr "Kunde"
+
+#: cpt-clients.php:128
+#@ cpt-clients
+msgctxt "Client"
+msgid "Add New"
+msgstr "Erstellen"
+
+#: cpt-clients.php:129
+#@ cpt-clients
+msgid "Add New Client"
+msgstr "Kunde erstellen"
+
+#: cpt-clients.php:130
+#@ cpt-clients
+msgid "Edit Client"
+msgstr "Kunde bearbeiten"
+
+#: cpt-clients.php:131
+#@ cpt-clients
+msgid "New Client"
+msgstr "Neuer Kunde"
+
+#: cpt-clients.php:132
+#@ cpt-clients
+msgid "All Clients"
+msgstr "Alle Kunden"
+
+#: cpt-clients.php:133
+#@ cpt-clients
+msgid "View Client"
+msgstr "Kunde ansehen"
+
+#: cpt-clients.php:134
+#@ cpt-clients
+msgid "Search Clients"
+msgstr "Kunden suchen"
+
+#: cpt-clients.php:135
+#@ cpt-clients
+msgid "No Clients found"
+msgstr "Keine Kunden gefunden"
+
+#: cpt-clients.php:136
+#@ cpt-clients
+msgid "No Clients found in Trash"
+msgstr "Keine Kunden im Papierkorb"
+
+#: cpt-clients.php:138
+#@ cpt-clients
+msgid "Clients"
+msgstr "Kunden"
+
