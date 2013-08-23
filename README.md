@@ -15,3 +15,14 @@ A custom post type to manage clients
 ## Language Support
 * english
 * german
+
+### Changelog
+
+#### v0.2
+
+* Enhancement: Security fixes
+
+#### v0.1
+
+* Initial release
+
