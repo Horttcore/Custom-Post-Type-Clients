@@ -1,4 +1,4 @@
-# Custom-Post-Type-Clients
+# Custom Post Type Clients
 
 A custom post type to manage clients
 
