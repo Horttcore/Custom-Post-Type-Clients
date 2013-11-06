@@ -18,6 +18,8 @@ A custom post type to manage clients
 
 ## Hooks
 
+### Actions
+
 * `cpt-clients-information-meta-box-before` - Post object is past as arguement
 * `cpt-clients-information-meta-box-after` - Post object is past as arguement
 
