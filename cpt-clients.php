@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: Custom Post Type Clients
-Plugin URL: https://github.com/Horttcore/Custom-Post-Type-Clients
-Description:
+Plugin URL: http://horttcore.de/
+Description: A custom tost type for managing clients
 Version: 0.2
 Author: Ralf Hortt
 Author URL: http://horttcore.de/
@@ -38,13 +38,15 @@ class Custom_Post_Type_Client
 	 **/
 	public function __construct()
 	{
+
 		add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes' ) );
 		add_action( 'init', array( $this, 'register_post_type' ) );
 		add_filter( 'post_updated_messages', array( $this, 'post_updated_messages' ) );
 		add_action( 'save_post', array( $this, 'save_post' ) );
 
 		load_plugin_textdomain( 'cpt-clients', FALSE, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-	}
+
+	} // end __construct
 
 
 
@@ -57,8 +59,10 @@ class Custom_Post_Type_Client
 	 **/
 	public function add_meta_boxes()
 	{
+
 		add_meta_box( 'client-meta', __( 'Information', 'cpt-clients' ), array( $this, 'meta_box' ), 'client' );
-	}
+
+	} // end add_meta_boxes
 
 
 
@@ -72,6 +76,7 @@ class Custom_Post_Type_Client
 	 **/
 	public function meta_box( $post )
 	{
+
 		$meta = get_post_meta( $post->ID, '_meta', TRUE );
 		wp_nonce_field( 'save-client-meta', 'client-meta-nounce' );
 		?>
@@ -84,7 +89,8 @@ class Custom_Post_Type_Client
 			<?php do_action( 'cpt-clients-information-meta-box-after', $post ) ?>
 		</table>
 		<?php
-	}
+
+	} // end meta_box
 
 
 
@@ -98,6 +104,7 @@ class Custom_Post_Type_Client
 	 **/
 	public function post_updated_messages( array $messages )
 	{
+
 		global $post, $post_ID;
 
 		$messages['client'] = array(
@@ -116,7 +123,8 @@ class Custom_Post_Type_Client
 		);
 
 		return $messages;
-	}
+
+	} // end post_updated_messages
 
 
 
@@ -129,6 +137,7 @@ class Custom_Post_Type_Client
 	 **/
 	public function register_post_type()
 	{
+
 		$labels = array(
 			'name' => _x( 'Clients', 'post type general name', 'cpt-clients' ),
 			'singular_name' => _x( 'Client', 'post type singular name', 'cpt-clients' ),
@@ -162,7 +171,8 @@ class Custom_Post_Type_Client
 		);
 
 		register_post_type( 'client', $args );
-	}
+
+	} // register_post_type
 
 
 
@@ -176,16 +186,18 @@ class Custom_Post_Type_Client
 	 **/
 	public function save_post( $post_id )
 	{
+
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
 			return;
 
 		if ( !wp_verify_nonce( $_POST['client-meta-nounce'], 'save-client-meta' ) )
 			return;
 
-		update_post_meta( $post_id, '_meta', array(
-			'url' => sanitize_textfield( $_POST['client-url'] )
-		) );
-	}
+		update_post_meta( $post_id, '_meta', apply_filters( 'save-client-meta', array(
+			'url' => sanitize_text_field( $_POST['client-url'] )
+		), $post_id ) );
+
+	} // save_post
 
 
 
