@@ -23,16 +23,16 @@ A custom post type to manage clients
 * `cpt-clients-information-meta-box-before` - Post object is past as arguement
 * `cpt-clients-information-meta-box-after` - Post object is past as arguement
 
-### Changelog
+## Changelog
 
-#### v0.2
+### v0.2
 
 * Bugfix: Fixed function comments
 * Added: Hooks
 * Added: Menu icon
 * Enhancement: Security fixes
 
-#### v0.1
+### v0.1
 
 * Initial release
 
