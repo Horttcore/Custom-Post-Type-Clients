@@ -1,0 +1,270 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Post Type Clients\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-24 14:10+0000\n"
+"PO-Revision-Date: 2017-03-24 14:10+0000\n"
+"Last-Translator: Horttcore <me@horttcore.de>\n"
+"Language-Team: German\n"
+"Language: de-DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://horttcore.de"
+msgstr "https://horttcore.de"
+
+#: classes/custom-post-type-clients.admin.php:49
+msgid "Information"
+msgstr "Informationen"
+
+#: classes/custom-post-type-clients.admin.php:73
+msgid "URL"
+msgstr "URL"
+
+#: classes/custom-post-type-clients.admin.php:101
+#: classes/custom-post-type-clients.admin.php:104
+msgid "Clients updated."
+msgstr "Kunde aktualisiert."
+
+#. %s: date and time of the revision
+#: classes/custom-post-type-clients.admin.php:106
+#, php-format
+msgid "Clients restored to revision from %s"
+msgstr "Kunde aus Revision vom %s wiederhergestellt."
+
+#: classes/custom-post-type-clients.admin.php:107
+msgid "Clients published."
+msgstr "Kunde veröffentlicht."
+
+#: classes/custom-post-type-clients.admin.php:108
+msgid "Clients saved."
+msgstr "Kunde gespeichert."
+
+#: classes/custom-post-type-clients.admin.php:109
+msgid "Clients submitted."
+msgstr "Kunde abgeschickt."
+
+#: classes/custom-post-type-clients.admin.php:110
+#, php-format
+msgid "Clients scheduled for: <strong>%1$s</strong>."
+msgstr "Kunde geplant für %s."
+
+#: classes/custom-post-type-clients.admin.php:110
+msgid "M j, Y @ G:i"
+msgstr "M j, Y @ G:i"
+
+#: classes/custom-post-type-clients.admin.php:111
+msgid "Clients draft updated."
+msgstr "Kundenentwurf aktualisiert."
+
+#: classes/custom-post-type-clients.admin.php:119
+msgid "View client"
+msgstr "Kunde ansehen"
+
+#: classes/custom-post-type-clients.admin.php:125
+msgid "Preview client"
+msgstr "Kunde-Vorschau"
+
+#: classes/custom-post-type-clients.php:68
+msgctxt "post type general name"
+msgid "Clients"
+msgstr "Kunden"
+
+#: classes/custom-post-type-clients.php:69
+msgctxt "post type singular name"
+msgid "Client"
+msgstr "Kunde"
+
+#: classes/custom-post-type-clients.php:70
+msgctxt "Client"
+msgid "Add New"
+msgstr "Erstellen"
+
+#: classes/custom-post-type-clients.php:71
+msgid "Add New Client"
+msgstr "Erstellen"
+
+#: classes/custom-post-type-clients.php:72
+msgid "Edit Client"
+msgstr "Kunde bearbeiten"
+
+#: classes/custom-post-type-clients.php:73
+msgid "New Client"
+msgstr "Neuer Kunde"
+
+#: classes/custom-post-type-clients.php:74
+msgid "View Client"
+msgstr "Kunde ansehen"
+
+#: classes/custom-post-type-clients.php:75
+msgid "View Clients"
+msgstr "Kunden ansehen"
+
+#: classes/custom-post-type-clients.php:76
+msgid "Search Clients"
+msgstr "Kunden durchsuchen"
+
+#: classes/custom-post-type-clients.php:77
+msgid "No Clients found"
+msgstr "Keine Kunden gefunden."
+
+#: classes/custom-post-type-clients.php:78
+msgid "No Clients found in Trash"
+msgstr "Keine Kunden im Papierkorb gefunden."
+
+#: classes/custom-post-type-clients.php:79
+msgid "Parent Client:"
+msgstr "Übergeordnete Kunde:"
+
+#: classes/custom-post-type-clients.php:80
+msgid "All Clients"
+msgstr "Alle Kunden"
+
+#: classes/custom-post-type-clients.php:81
+msgid "Client Archives"
+msgstr "Kunden-Archive"
+
+#: classes/custom-post-type-clients.php:82
+msgid "Client Attributes"
+msgstr "Kunden-Attribute"
+
+#: classes/custom-post-type-clients.php:83
+msgid "Insert into client"
+msgstr "In den Kunde einfügen"
+
+#: classes/custom-post-type-clients.php:84
+msgid "Uploaded to this client"
+msgstr "Zu diesem Kunde hochgeladen"
+
+#: classes/custom-post-type-clients.php:85
+msgid "Featured Image"
+msgstr "Logo"
+
+#: classes/custom-post-type-clients.php:86
+msgid "Set featured image"
+msgstr "Logo festlegen"
+
+#: classes/custom-post-type-clients.php:87
+msgid "Remove featured image"
+msgstr "Logo entfernen"
+
+#: classes/custom-post-type-clients.php:88
+msgid "Use as featured image"
+msgstr "Als Logo nutzen"
+
+#: classes/custom-post-type-clients.php:89
+msgid "Filter clients list"
+msgstr "Kundenliste filtern"
+
+#: classes/custom-post-type-clients.php:90
+msgid "Clients list navigation"
+msgstr "Navigation der Kundenliste"
+
+#: classes/custom-post-type-clients.php:91
+msgid "Clients list"
+msgstr "Kundenliste"
+
+#: classes/custom-post-type-clients.php:99
+msgctxt "post type slug"
+msgid "clients"
+msgstr "kunden"
+
+#: classes/custom-post-type-clients.php:127
+msgctxt "taxonomy general name"
+msgid "Client Categories"
+msgstr "Kundenkategorien"
+
+#: classes/custom-post-type-clients.php:128
+msgctxt "taxonomy singular name"
+msgid "Client Category"
+msgstr "Kundenkategorie"
+
+#: classes/custom-post-type-clients.php:129
+msgid "Search Client Categories"
+msgstr "Kundenkategorien suchen"
+
+#: classes/custom-post-type-clients.php:130
+msgid "Popular Client Categories"
+msgstr "Beliebte Kundenkategorien"
+
+#: classes/custom-post-type-clients.php:131
+msgid "All Client Categories"
+msgstr "Alle Kundenkategorien"
+
+#: classes/custom-post-type-clients.php:132
+msgid "Parent Client Category"
+msgstr "Übergeordnete Kundenkategorie"
+
+#: classes/custom-post-type-clients.php:133
+msgid "Parent Client Category:"
+msgstr "Übergeordnete Kundenkategorie:"
+
+#: classes/custom-post-type-clients.php:134
+msgid "Edit Client Category"
+msgstr "Kundenkategorie bearbeiten"
+
+#: classes/custom-post-type-clients.php:135
+msgid "View Client Category"
+msgstr "Kundenkategorie ansehen."
+
+#: classes/custom-post-type-clients.php:136
+msgid "Update Client Category"
+msgstr "Kundenkategorie aktualisieren."
+
+#: classes/custom-post-type-clients.php:137
+msgid "Add New Client Category"
+msgstr "Neue Kundenkategorie erstellen"
+
+#: classes/custom-post-type-clients.php:138
+msgid "New Client Category Name"
+msgstr "Kundenkategoriename"
+
+#: classes/custom-post-type-clients.php:139
+msgid "Separate client categories with commas"
+msgstr "Kundenkategorien durch Kommas trennen."
+
+#: classes/custom-post-type-clients.php:140
+msgid "Add or remove client categories"
+msgstr "Kundenkategorien hinzufügen oder entfernen"
+
+#: classes/custom-post-type-clients.php:141
+msgid "Choose from the most used client categories"
+msgstr "Wähle aus den meistgenutzten Kundenkategorien"
+
+#: classes/custom-post-type-clients.php:142
+msgid "No client categories found"
+msgstr "Keine Kundenkategorien gefunden."
+
+#: classes/custom-post-type-clients.php:143
+msgid "No client categories"
+msgstr "Keine Kundenkategorien"
+
+#: classes/custom-post-type-clients.php:144
+msgid "Client Categories list navigation"
+msgstr "Navigation der Kundenkategorienliste"
+
+#: classes/custom-post-type-clients.php:145
+msgid "Client Categories list"
+msgstr "Kundenkategorienliste"
+
+#: classes/custom-post-type-clients.php:149
+msgctxt "Client Category Slug"
+msgid "client-category"
+msgstr "kunden-kategorie"
+
+#. Name of the plugin
+msgid "Custom Post Type Clients"
+msgstr "Custom Post Type Kunden"
+
+#. Description of the plugin
+msgid "Manage clients"
+msgstr "Kunden verwalten"
+
+#. Author of the plugin
+msgid "Ralf Hortt"
+msgstr "Ralf Hortt"

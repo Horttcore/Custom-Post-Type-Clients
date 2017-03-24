@@ -1,12 +1,12 @@
 # Custom Post Type Clients
 
-A custom post type to manage clients
+A custom post type for managing clients
 
 ## Supports
 
 * Title
-* Thumbnail
-* Page Attributes
+* Editor
+* Custom taxonomy `client-category`
 
 ## Custom Fields
 
@@ -17,32 +17,17 @@ A custom post type to manage clients
 * english
 * german
 
-## Hooks
-
-### Actions
-
-* `cpt-clients-information-meta-box-before` - Post object is past as arguement
-* `cpt-clients-information-meta-box-after` - Post object is past as arguement
-
-### Filters
-
-* `save-client-meta` - Save client meta
+Translation ready
 
 ## Changelog
 
-### v0.3
-
-* Enhancement: Cleanup
-* Added hook: `save-client-meta`
-
 ### v0.2
 
-* Bugfix: Fixed function comments
-* Added: Hooks
-* Added: Menu icon
-* Enhancement: Security fixes
+* Refactoring
+* Update register post type labels
+* Update register taxonomy labels
+* Update translations
 
 ### v0.1
 
 * Initial release
-
