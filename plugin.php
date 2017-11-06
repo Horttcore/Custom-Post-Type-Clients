@@ -12,6 +12,7 @@
  */
 
 require( 'classes/custom-post-type-clients.php' );
-
-if ( is_admin() )
-	require( 'classes/custom-post-type-clients.admin.php' );
+require( 'includes/template-tags.php');
+if (is_admin()) {
+    require( 'classes/custom-post-type-clients.admin.php' );
+}

@@ -38,6 +38,13 @@ Translation ready
 
 ## Changelog
 
+### v0.5
+
+* Added: Admin logo column
+* Added: Admin url column
+* Added: Tempalte functions `get_client_url()` and `the_client_url()`
+* Changed: Set default order to menu_order, title
+
 ### v0.4
 
 * Changed: Refactoring
