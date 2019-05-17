@@ -1,0 +1,27 @@
+{
+    "name": "horttcore/custom-post-type-clients",
+    "description": "A WordPress custom post type for managing clients",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ralf Hortt",
+            "email": "me@horttcore.de"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Horttcore\\CustomPostTypeClients\\": "src/"
+        },
+        "files": [
+            "inc/template-tags.php"
+        ]
+    },
+    "require": {
+        "horttcore/wp-custom-post-type": "1.0.2",
+        "horttcore/wp-custom-taxonomy": "^1.0.0",
+        "horttcore/wp-plugin": "^1.0.1",
+        "horttcore/wp-meta-box": "^1.0.0"
+    }
+}

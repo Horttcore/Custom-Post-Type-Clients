@@ -7,7 +7,7 @@
  **/
 function get_client_url(int $post_id)
 {
-    return get_client_meta( $post_id, 'url' );
+    return get_post_meta( $post_id, '_url', TRUE );
 }
 
 
@@ -23,16 +23,3 @@ function the_client_url(int $post_id = null)
     echo get_client_url( $post_id );
 }
 
-
-/**
- * Get client meta
- *
- * @param int $post_id Post ID
- * @param string $key Meta Key
- * @return array
- **/
-function get_client_meta(int $post_id, string $key)
-{
-    $meta = get_post_meta( $post_id, '_meta', true );
-    return ( isset( $meta[$key] ) ) ? $meta[$key] : '';
-}

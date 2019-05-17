@@ -5,12 +5,17 @@ A custom post type to manage clients
 ## Supports
 
 * Title
-* Thumbnail
+* Post-Thumbnail
 * Page Attributes
 
 ## Custom Fields
 
 * URL
+
+## Template functions
+
+* `get_client_url(int $post_id)` Get client url
+* `the_client_url(int $post_id = the_ID() )` Print client url
 
 ## Language Support
 
@@ -30,13 +35,15 @@ Translation ready
 
 * `save-client-meta` - Save client meta
 
-## ToDo
+### Templating
 
-* Widget
-* Shortcode
-* Meta box as submodule
+* `custom-post-type-clients-loop-template` - Template file for the loop
+* `custom-post-type-clients-single-template` - Template file for a single entry in the loop
+* `custom-post-type-clients-image-size` - Default image size
 
 ## Changelog
+
+### v1.0
 
 ### v0.5
 

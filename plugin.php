@@ -2,17 +2,44 @@
 /**
  * Plugin Name: Custom Post Type Clients
  * Plugin URI: https://horttcore.de
- * Description: Manage clients
+ * Description: A custom post type for managing clients
  * Version: 1.0.0
  * Author: Ralf Hortt
  * Author URI: https://horttcore.de
  * Text Domain: custom-post-type-clients
  * Domain Path: /languages/
- * License: GPL2
+ * License: MIT
  */
+namespace Horttcore\CustomPostTypeClients;
 
-require( 'classes/custom-post-type-clients.php' );
-require( 'includes/template-tags.php');
-if (is_admin()) {
-    require( 'classes/custom-post-type-clients.admin.php' );
-}
+use Horttcore\Plugin\PluginFactory;
+use Horttcore\CustomPostTypeClients\MetaBoxes\ClientMeta;
+use Horttcore\CustomPostTypeClients\Blocks\ClientsBlock;
+
+// ------------------------------------------------------------------------------
+// Prevent direct file access
+// ------------------------------------------------------------------------------
+if (!defined('WPINC')) :
+    die;
+endif;
+
+
+// ------------------------------------------------------------------------------
+// Autoloader
+// ------------------------------------------------------------------------------
+$autoloader = dirname(__FILE__) . '/vendor/autoload.php';
+
+if (is_readable($autoloader)) :
+    require_once $autoloader;
+endif;
+
+
+// ------------------------------------------------------------------------------
+// Bootstrap
+// ------------------------------------------------------------------------------
+PluginFactory::create()
+    ->addTranslation('custom-post-type-clients', dirname(plugin_basename(__FILE__)) . '/languages/')
+    ->addService(Clients::class)
+    ->addService(ClientMeta::class)
+    ->addService(ClientsBlock::class)
+    ->boot();
