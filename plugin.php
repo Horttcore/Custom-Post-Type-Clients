@@ -8,13 +8,14 @@
  * Author URI: https://horttcore.de
  * Text Domain: custom-post-type-clients
  * Domain Path: /languages/
- * License: MIT
+ * License: MIT.
  */
+
 namespace Horttcore\CustomPostTypeClients;
 
-use Horttcore\Plugin\PluginFactory;
-use Horttcore\CustomPostTypeClients\MetaBoxes\ClientMeta;
 use Horttcore\CustomPostTypeClients\Blocks\ClientsBlock;
+use Horttcore\CustomPostTypeClients\MetaBoxes\ClientMeta;
+use Horttcore\Plugin\PluginFactory;
 
 // ------------------------------------------------------------------------------
 // Prevent direct file access
@@ -23,22 +24,20 @@ if (!defined('WPINC')) :
     die;
 endif;
 
-
 // ------------------------------------------------------------------------------
 // Autoloader
 // ------------------------------------------------------------------------------
-$autoloader = dirname(__FILE__) . '/vendor/autoload.php';
+$autoloader = dirname(__FILE__).'/vendor/autoload.php';
 
 if (is_readable($autoloader)) :
     require_once $autoloader;
 endif;
 
-
 // ------------------------------------------------------------------------------
 // Bootstrap
 // ------------------------------------------------------------------------------
 PluginFactory::create()
-    ->addTranslation('custom-post-type-clients', dirname(plugin_basename(__FILE__)) . '/languages/')
+    ->addTranslation('custom-post-type-clients', dirname(plugin_basename(__FILE__)).'/languages/')
     ->addService(Clients::class)
     ->addService(ClientMeta::class)
     ->addService(ClientsBlock::class)
