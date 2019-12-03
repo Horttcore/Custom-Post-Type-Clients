@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04115def5c76069aa9dfeb73c550b6cd",
+    "content-hash": "4bd48fca3ccc968461c9e96ce48dd81d",
     "packages": [
         {
             "name": "horttcore/wp-custom-post-type",
@@ -107,22 +107,22 @@
         },
         {
             "name": "horttcore/wp-plugin",
-            "version": "1.0.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Horttcore/wp-plugin.git",
-                "reference": "e46280beadd856d5f9515a62f6470908f0592b58"
+                "reference": "c80ee3bc872f0ba2f831e255e12bae6829be5f6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Horttcore/wp-plugin/zipball/e46280beadd856d5f9515a62f6470908f0592b58",
-                "reference": "e46280beadd856d5f9515a62f6470908f0592b58",
+                "url": "https://api.github.com/repos/Horttcore/wp-plugin/zipball/c80ee3bc872f0ba2f831e255e12bae6829be5f6b",
+                "reference": "c80ee3bc872f0ba2f831e255e12bae6829be5f6b",
                 "shasum": ""
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Horttcore\\Plugin\\": "src/"
+                    "RalfHortt\\Plugin\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -136,7 +136,7 @@
                 }
             ],
             "description": "A WordPress plugin helper",
-            "time": "2019-01-16T11:00:45+00:00"
+            "time": "2019-12-02T07:35:51+00:00"
         }
     ],
     "packages-dev": [],
