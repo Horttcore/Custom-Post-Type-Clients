@@ -46,11 +46,9 @@ class ClientsBlock
             'showposts' => $attributes['postsToShow'],
         ]);
 
-        if ($query->have_posts()) :
-
+        if ($query->have_posts()) {
             require apply_filters('custom-post-type-clients-loop-template', plugin_dir_path(__FILE__).'/../../views/loop.php', $query, $attributes);
-
-        endif;
+        }
 
         return ob_get_clean();
     }
