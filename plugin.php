@@ -38,7 +38,7 @@ if (is_readable($autoloader)) {
 // Bootstrap
 // ------------------------------------------------------------------------------
 PluginFactory::create()
-    ->addService(Translator::class, 'custom-post-type-client', dirname(plugin_basename(__FILE__)).'/languages/')
+    ->addService(Translator::class, 'custom-post-type-clients', dirname(plugin_basename(__FILE__)).'/languages/')
     ->addService(Clients::class)
     ->addService(ClientMeta::class)
     ->addService(ClientsBlock::class)
