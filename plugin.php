@@ -11,11 +11,12 @@
  * License: MIT.
  */
 
-namespace Horttcore\CustomPostTypeClients;
+namespace RalfHortt\CustomPostTypeClients;
 
-use Horttcore\CustomPostTypeClients\Blocks\ClientsBlock;
-use Horttcore\CustomPostTypeClients\MetaBoxes\ClientMeta;
-use Horttcore\Plugin\PluginFactory;
+use RalfHortt\CustomPostTypeClients\Blocks\ClientsBlock;
+use RalfHortt\CustomPostTypeClients\MetaBoxes\ClientMeta;
+use RalfHortt\Plugin\PluginFactory;
+use RalfHortt\TranslatorService\Translator;
 
 // ------------------------------------------------------------------------------
 // Prevent direct file access
@@ -37,7 +38,7 @@ endif;
 // Bootstrap
 // ------------------------------------------------------------------------------
 PluginFactory::create()
-    ->addTranslation('custom-post-type-clients', dirname(plugin_basename(__FILE__)).'/languages/')
+    ->addService(Translator::class, 'custom-post-type-client', dirname(plugin_basename(__FILE__)).'/languages/')
     ->addService(Clients::class)
     ->addService(ClientMeta::class)
     ->addService(ClientsBlock::class)

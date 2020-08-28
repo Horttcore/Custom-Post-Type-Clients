@@ -6,9 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Horttcore\\Plugin\\' => array($vendorDir . '/horttcore/wp-plugin/src'),
+    'RalfHortt\\WPBlock\\' => array($vendorDir . '/ralfhortt/wp-block/src'),
+    'RalfHortt\\TranslatorService\\' => array($vendorDir . '/ralfhortt/translator-service/src'),
+    'RalfHortt\\ServiceContracts\\' => array($vendorDir . '/ralfhortt/service-contracts/src'),
+    'RalfHortt\\Plugin\\' => array($vendorDir . '/ralfhortt/wp-plugin/src'),
+    'RalfHortt\\CustomPostTypeClients\\' => array($baseDir . '/src'),
     'Horttcore\\MetaBoxes\\' => array($vendorDir . '/horttcore/wp-meta-box/src'),
     'Horttcore\\CustomTaxonomy\\' => array($vendorDir . '/horttcore/wp-custom-taxonomy/src'),
     'Horttcore\\CustomPostType\\' => array($vendorDir . '/horttcore/wp-custom-post-type/src'),
-    'Horttcore\\CustomPostTypeClients\\' => array($baseDir . '/src'),
 );

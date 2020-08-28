@@ -1,57 +1,67 @@
 <?php
+namespace RalfHortt\CustomPostTypeClients\Blocks;
 
-namespace Horttcore\CustomPostTypeClients\Blocks;
+use RalfHortt\WPBlock\Block;
 
-class ClientsBlock
+class ClientsBlock extends Block
 {
-    /**
-     * Register hooks.
-     *
-     * @todo Refactor in a composer package
-     *
-     * @return void
-     **/
-    public function register()
+    protected $name = 'custom-post-type-clients/loop';
+
+    protected $attributes = [
+        'postLayout' => [
+            'type' => 'string',
+            'default' => 'list',
+        ],
+        'gridColumns' => [
+            'type'=> 'integer',
+            'default'=> -1,
+        ],
+        'orderBy' => [
+            'type' => 'string',
+            'default' => 'title',
+        ],
+        'order' => [
+            'type' => 'string',
+            'default' => 'asc',
+        ],
+        'numberOfItems' => [
+            'type' => 'integer',
+            'default' => 10,
+        ],
+        'offset' => [
+            'type' => 'integer',
+            'default' => 0,
+        ],
+        'postIn' => [
+            'type' => 'array',
+            'default' => [],
+        ],
+    ];
+
+    protected function render(array $atts, string $content): void
     {
-        register_block_type('horttcore/clients', [
-            'render_callback' => function ($attributes) {
-                return $this->render($attributes);
-            },
-        ]);
-    }
+        $attributes = wp_parse_args($atts, $this->getAttributes());
 
-    /**
-     * Render the meta box.
-     *
-     * @param mixed $attributes Attributes
-     *
-     * @return string HTML output
-     *
-     * @since 1.0.0
-     */
-    public function render($attributes)
-    {
-        ob_start();
-
-        $attributes = wp_parse_args($attributes, [
-            'orderby'     => 'menu_order',
-            'order'       => 'ASC',
-            'postsToShow' => 10,
-        ]);
-
-        $query = new \WP_Query([
+        $args = [
             'post_type' => 'client',
             'orderby'   => $attributes['orderBy'],
             'order'     => $attributes['order'],
-            'showposts' => $attributes['postsToShow'],
-        ]);
+            'showposts' => $attributes['numberOfItems'],
+            'offset' => $attributes['offset'],
+        ];
+        if (!empty($attributes['postIn'])) {
+            $args['post__in'] = $attributes['postIn'];
+            $args['orderby'] = 'post__in';
+            $args['order'] = 'asc';
+            $args['showposts'] = -1;
+        }
+
+        $query = new \WP_Query($args);
 
         if ($query->have_posts()) :
 
-            require apply_filters('custom-post-type-clients-loop-template', plugin_dir_path(__FILE__).'/../../views/loop.php', $query, $attributes);
+            require apply_filters('custom-post-type-clients-loop-template', plugin_dir_path(__FILE__).'/../../views/loop.php', $query, $attributes, $atts);
 
         endif;
-
-        return ob_get_clean();
     }
 }

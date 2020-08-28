@@ -1,25 +1,11 @@
 <?php
-/**
- * Get client URL.
- *
- * @param int $post_id Post ID
- *
- * @return string URL
- **/
-function get_client_url(int $post_id)
+function get_client_url(int $post_id): string
 {
-    return get_post_meta($post_id, '_url', true);
+    return apply_filters('custom-post-type-clients/get-client-url', get_post_meta($post_id, '_url', true));
 }
 
-/**
- * Get client meta.
- *
- * @param int $post_id Post ID
- *
- * @return void
- **/
-function the_client_url(int $post_id = null)
+function the_client_url(string $before = '', string $after = '', int $post_id = null): void
 {
     $post_id = (null != $post_id) ? $post_id : get_the_ID();
-    echo get_client_url($post_id);
+    echo apply_filters('custom-post-type-clients/client-url', $before . get_client_url($post_id) . $after);
 }

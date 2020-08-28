@@ -12,7 +12,7 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "Horttcore\\CustomPostTypeClients\\": "src/"
+            "RalfHortt\\CustomPostTypeClients\\": "src/"
         },
         "files": [
             "inc/template-tags.php"
@@ -21,7 +21,9 @@
     "require": {
         "horttcore/wp-custom-post-type": "1.0.2",
         "horttcore/wp-custom-taxonomy": "^1.0.0",
-        "horttcore/wp-plugin": "^1.0.1",
-        "horttcore/wp-meta-box": "^1.0.0"
+        "horttcore/wp-meta-box": "^1.0.0",
+        "ralfhortt/wp-block": "^1.0",
+        "ralfhortt/wp-plugin": "^2.0",
+        "ralfhortt/translator-service": "^1.0"
     }
 }

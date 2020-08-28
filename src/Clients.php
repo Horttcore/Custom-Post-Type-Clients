@@ -1,6 +1,6 @@
 <?php
 
-namespace Horttcore\CustomPostTypeClients;
+namespace RalfHortt\CustomPostTypeClients;
 
 use Horttcore\CustomPostType\PostType;
 

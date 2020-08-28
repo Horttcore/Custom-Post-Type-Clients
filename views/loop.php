@@ -1,10 +1,7 @@
-<section class="clients <?php if ($attributes['className']) {
+<section class="clients <?php if (isset($attributes['className'])) {
     echo esc_attr($attributes['className']);
 } ?>">
-    <?php if ($attributes['title']) {
-    ?><h1 class="clients__title"><?php echo $attributes['title'] ?></h1><?php
-} ?>
-    <div class="clients__list">
+    <div class="clients__<?= $attributes['postLayout'] ?>">
         <?php
         while ($query->have_posts()) :
             $query->the_post();

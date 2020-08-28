@@ -11,20 +11,42 @@ class ComposerStaticInit11f7d1792ae8669d912086aefecce121
     );
 
     public static $prefixLengthsPsr4 = array (
+        'R' => 
+        array (
+            'RalfHortt\\WPBlock\\' => 18,
+            'RalfHortt\\TranslatorService\\' => 28,
+            'RalfHortt\\ServiceContracts\\' => 27,
+            'RalfHortt\\Plugin\\' => 17,
+            'RalfHortt\\CustomPostTypeClients\\' => 32,
+        ),
         'H' => 
         array (
-            'Horttcore\\Plugin\\' => 17,
             'Horttcore\\MetaBoxes\\' => 20,
             'Horttcore\\CustomTaxonomy\\' => 25,
             'Horttcore\\CustomPostType\\' => 25,
-            'Horttcore\\CustomPostTypeClients\\' => 32,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Horttcore\\Plugin\\' => 
+        'RalfHortt\\WPBlock\\' => 
         array (
-            0 => __DIR__ . '/..' . '/horttcore/wp-plugin/src',
+            0 => __DIR__ . '/..' . '/ralfhortt/wp-block/src',
+        ),
+        'RalfHortt\\TranslatorService\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ralfhortt/translator-service/src',
+        ),
+        'RalfHortt\\ServiceContracts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ralfhortt/service-contracts/src',
+        ),
+        'RalfHortt\\Plugin\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ralfhortt/wp-plugin/src',
+        ),
+        'RalfHortt\\CustomPostTypeClients\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'Horttcore\\MetaBoxes\\' => 
         array (
@@ -37,10 +59,6 @@ class ComposerStaticInit11f7d1792ae8669d912086aefecce121
         'Horttcore\\CustomPostType\\' => 
         array (
             0 => __DIR__ . '/..' . '/horttcore/wp-custom-post-type/src',
-        ),
-        'Horttcore\\CustomPostTypeClients\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

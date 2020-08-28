@@ -1,6 +1,6 @@
 <?php
 
-namespace Horttcore\CustomPostTypeClients\MetaBoxes;
+namespace RalfHortt\CustomPostTypeClients\MetaBoxes;
 
 use Horttcore\MetaBoxes\MetaBox;
 
