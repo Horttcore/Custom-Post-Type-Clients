@@ -33,7 +33,7 @@ class Clients extends PostType
      *
      * @author Ralf Hortt <me@horttcore.de>
      */
-    public function getConfig() : array
+    public function getConfig(): array
     {
         return [
             'public'             => true,
@@ -67,7 +67,7 @@ class Clients extends PostType
      *
      * @return array
      **/
-    public function getLabels() : array
+    public function getLabels(): array
     {
         return [
             'name'                  => _x('Clients', 'post type general name', 'custom-post-type-clients'),
@@ -107,7 +107,7 @@ class Clients extends PostType
      *
      * @return array Update messages
      **/
-    public function getPostUpdateMessages(\WP_Post $post, string $postType, \WP_Post_Type $postTypeObjects) : array
+    public function getPostUpdateMessages(\WP_Post $post, string $postType, \WP_Post_Type $postTypeObjects): array
     {
         $messages = [
             0  => '', // Unused. Messages start at index 1.

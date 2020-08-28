@@ -1,4 +1,5 @@
 <?php
+
 namespace RalfHortt\CustomPostTypeClients\Blocks;
 
 use RalfHortt\WPBlock\Block;
@@ -9,31 +10,31 @@ class ClientsBlock extends Block
 
     protected $attributes = [
         'postLayout' => [
-            'type' => 'string',
+            'type'    => 'string',
             'default' => 'list',
         ],
         'gridColumns' => [
-            'type'=> 'integer',
+            'type'   => 'integer',
             'default'=> -1,
         ],
         'orderBy' => [
-            'type' => 'string',
+            'type'    => 'string',
             'default' => 'title',
         ],
         'order' => [
-            'type' => 'string',
+            'type'    => 'string',
             'default' => 'asc',
         ],
         'numberOfItems' => [
-            'type' => 'integer',
+            'type'    => 'integer',
             'default' => 10,
         ],
         'offset' => [
-            'type' => 'integer',
+            'type'    => 'integer',
             'default' => 0,
         ],
         'postIn' => [
-            'type' => 'array',
+            'type'    => 'array',
             'default' => [],
         ],
     ];
@@ -47,7 +48,7 @@ class ClientsBlock extends Block
             'orderby'   => $attributes['orderBy'],
             'order'     => $attributes['order'],
             'showposts' => $attributes['numberOfItems'],
-            'offset' => $attributes['offset'],
+            'offset'    => $attributes['offset'],
         ];
         if (!empty($attributes['postIn'])) {
             $args['post__in'] = $attributes['postIn'];
@@ -58,10 +59,8 @@ class ClientsBlock extends Block
 
         $query = new \WP_Query($args);
 
-        if ($query->have_posts()) :
-
+        if ($query->have_posts()) {
             require apply_filters('custom-post-type-clients-loop-template', plugin_dir_path(__FILE__).'/../../views/loop.php', $query, $attributes, $atts);
-
-        endif;
+        }
     }
 }

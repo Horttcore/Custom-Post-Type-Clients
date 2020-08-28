@@ -21,18 +21,18 @@ use RalfHortt\TranslatorService\Translator;
 // ------------------------------------------------------------------------------
 // Prevent direct file access
 // ------------------------------------------------------------------------------
-if (!defined('WPINC')) :
-    die;
-endif;
+if (!defined('WPINC')) {
+    exit;
+}
 
 // ------------------------------------------------------------------------------
 // Autoloader
 // ------------------------------------------------------------------------------
 $autoloader = dirname(__FILE__).'/vendor/autoload.php';
 
-if (is_readable($autoloader)) :
+if (is_readable($autoloader)) {
     require_once $autoloader;
-endif;
+}
 
 // ------------------------------------------------------------------------------
 // Bootstrap
