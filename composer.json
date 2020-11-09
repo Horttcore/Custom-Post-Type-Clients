@@ -22,6 +22,6 @@
         "horttcore/wp-custom-post-type": "1.0.2",
         "horttcore/wp-custom-taxonomy": "^1.0.0",
         "horttcore/wp-plugin": "^1.0.1",
-        "horttcore/wp-meta-box": "^1.0.0"
+        "horttcore/wp-meta-box": "^2.0.2"
     }
 }
