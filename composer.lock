@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04115def5c76069aa9dfeb73c550b6cd",
+    "content-hash": "186defce09f4bd2ad79b2f32a65fdf32",
     "packages": [
         {
             "name": "horttcore/wp-custom-post-type",
@@ -70,20 +70,21 @@
                 }
             ],
             "description": "A WordPress custom taxonomy helper",
+            "abandoned": "ralfhortt/wp-custom-taxonomy",
             "time": "2019-01-16T07:02:41+00:00"
         },
         {
             "name": "horttcore/wp-meta-box",
-            "version": "1.0.0",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Horttcore/wp-meta-box.git",
-                "reference": "98a6a610470eda97c179e05775fc00506ee75955"
+                "reference": "876d4e296e126a9c9d0bc32da67724bb9b1692e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Horttcore/wp-meta-box/zipball/98a6a610470eda97c179e05775fc00506ee75955",
-                "reference": "98a6a610470eda97c179e05775fc00506ee75955",
+                "url": "https://api.github.com/repos/Horttcore/wp-meta-box/zipball/876d4e296e126a9c9d0bc32da67724bb9b1692e5",
+                "reference": "876d4e296e126a9c9d0bc32da67724bb9b1692e5",
                 "shasum": ""
             },
             "type": "library",
@@ -103,7 +104,8 @@
                 }
             ],
             "description": "A WordPress meta box helper",
-            "time": "2019-01-16T09:32:38+00:00"
+            "abandoned": "ralfhortt/wp-meta-box",
+            "time": "2020-11-06T15:18:56+00:00"
         },
         {
             "name": "horttcore/wp-plugin",
@@ -136,6 +138,7 @@
                 }
             ],
             "description": "A WordPress plugin helper",
+            "abandoned": "ralfhortt/wp-plugin",
             "time": "2019-01-16T11:00:45+00:00"
         }
     ],
@@ -146,5 +149,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
