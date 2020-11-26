@@ -20,7 +20,7 @@
     },
     "require": {
         "horttcore/wp-custom-post-type": "1.0.2",
-        "horttcore/wp-custom-taxonomy": "^1.0.0",
+        "horttcore/wp-custom-taxonomy": "^2.0.1",
         "horttcore/wp-plugin": "^1.0.1",
         "horttcore/wp-meta-box": "^1.0.0"
     }
